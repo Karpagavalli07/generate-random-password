@@ -1,0 +1,50 @@
+body{
+  background-color: aqua;
+  
+}
+h1{
+  color: white;
+}
+.wh{
+  padding: 100px;
+  width:90%;
+  max-width: 700px;
+}
+.display{
+  width:100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background-color:white;
+  color: black;
+  display: flex;
+  align-items: center;
+ justify-content:space-between;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+.wh h1 span{
+  color:rgb(3, 167, 98);
+  padding-bottom: 5px;
+}
+
+.display img{
+  cursor:pointer;
+  background-color: rgb(212, 126, 22);
+  
+}
+.display input{
+  border:0;
+  outline:0;
+  font-size: 15px;
+}
+
+button{
+  background-color: rgb(104, 162, 17);
+  border-radius: 10px;
+  color: aliceblue;
+  font-size: 21px;
+  padding: 15px 15px;
+  border:0;
+  cursor:pointer;
+  outline: 0;
+}

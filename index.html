@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+  <div class="wh">  
+    <h1>Generate a <br><span><u>Random Password</u></span></h1>  
+    <div class="display">
+      <input type="text" id="passwdd" placeholder="Password...">
+      <img src="k  letter1.png" title="copy" onclick="copypasswd()" width="25px" alt="copy">
+    </div>
+    <button onclick="createpasswd()">Generate Password</button>
+  </div>
+  <script>
+    const len=12;
+    const upperc="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerc="abcdefghijklmnopqrstuvwxyz";
+    const alldig="1234567890";
+    const ss="*/-+!@#$%^&*()_=}{:?/|\[]<>}";
+    const pswd=document.getElementById("passwdd");
+    function createpasswd(){
+          let pass="";
+          pass+=upperc[Math.floor(Math.random()*upperc.length)];
+          pass+=lowerc[Math.floor(Math.random()*lowerc.length)];
+          pass+=alldig[Math.floor(Math.random()*alldig.length)];
+          pass+=ss[Math.floor(Math.random()*ss.length)];
+        while(pass.length<len){
+          pass+=upperc[Math.floor(Math.random()*upperc.length)];
+          pass+=lowerc[Math.floor(Math.random()*lowerc.length)];
+          pass+=alldig[Math.floor(Math.random()*alldig.length)];
+          pass+=ss[Math.floor(Math.random()*ss.length)];
+        }
+        pswd.value=pass;        
+    }
+    function copypasswd(){
+      pswd.select();
+      document.execCommand("copy");
+    }
+  </script>
+</body>
+</html>
